@@ -1,12 +1,8 @@
-import React from 'react'
-import { render, screen } from '@testing-library/react'
-import { MemoryRouter } from 'react-router-dom'
-import Sidebar from '../Sidebar'
+import { screen } from '@testing-library/react'
+import { renderWithRouter } from '@utils/testUtils'
+import { describe, expect, it } from 'vitest'
 
-const renderWithRouter = (ui, { route = '/' } = {}) => {
-  window.history.pushState({}, 'Test page', route)
-  return render(ui, { wrapper: MemoryRouter })
-}
+import Sidebar from '../Sidebar'
 
 describe('<Sidebar />', () => {
   it('should render a link to the Dashboard', () => {
