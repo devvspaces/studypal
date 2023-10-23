@@ -1,12 +1,8 @@
-import React from 'react'
-import { render, screen } from '@testing-library/react'
-import { MemoryRouter } from 'react-router-dom'
-import Dashboard from '../Dashboard'
+import { screen } from '@testing-library/react'
+import { renderWithRouter } from '@utils/testUtils'
+import { describe, expect, it } from 'vitest'
 
-const renderWithRouter = (ui, { route = '/' } = {}) => {
-  window.history.pushState({}, 'Test page', route)
-  return render(ui, { wrapper: MemoryRouter })
-}
+import Dashboard from '../Dashboard'
 
 describe('<Dashboard />', () => {
   it('should render the Navbar component', () => {

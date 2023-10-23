@@ -21,5 +21,5 @@ To run the Frontend locally, follow these steps:
 4. Start the development server:
    ```bash
    npm run dev
-5. Open your web browser and visit http://localhost:3000 to access the application.
+5. Open your web browser and visit http://localhost:5173 to access the application.
 
