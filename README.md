@@ -23,3 +23,22 @@ To run the Frontend locally, follow these steps:
    npm run dev
 5. Open your web browser and visit http://localhost:5173 to access the application.
 
+### Mobile
+
+To run the Mobile locally, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/devvspaces/studyPal.git
+2. Navigate to the project directory:
+   ```bash
+   cd studyPal/mobile
+3. Install project dependencies:
+   ```bash
+   flutter pub get
+4. Run the app:
+   ```bash
+   flutter run
+
+
