@@ -9,23 +9,6 @@ const Sidebar = () => {
     const courses = document.getElementById("courses") as HTMLElement | null
     const settings = document.getElementById("settings") as HTMLElement | null
   
-    let current_url = window.location.href
-  
-    let dash_url = current_url.search("dashboard")
-    let courses_url = current_url.search("courses")
-    let settings_url = current_url.search("settings")
-  
-    console.log("SETT:" + settings_url)
-    console.log("DASH" + dash_url)
-    console.log("COU" + courses_url)
-  
-  }, [])
-
-  function ActivePage () {
-    const dashboard = document.getElementById("dashboard") as HTMLButtonElement | null
-    const courses = document.getElementById("courses") as HTMLButtonElement | null
-    const settings = document.getElementById("settings") as HTMLButtonElement | null
-  
     
     setTimeout(() => {
       let current_url = window.location.href
@@ -38,7 +21,6 @@ const Sidebar = () => {
         dashboard.style.color = "#fff"
         dashboard.style.fill = "#fff"
         dashboard.style.stroke = "#312e81"
-        dashboard.style
 
         courses.style.backgroundColor = "white"
         courses.style.color = "#C6CEDD"
@@ -74,17 +56,77 @@ const Sidebar = () => {
         settings.style.backgroundColor = "#312e81"
         settings.style.color = "#fff"
         settings.style.fill = "#fff"
-        settings.style.stroke = "#fff"
+        settings.style.stroke = "#312e81"
 
         courses.style.backgroundColor = "white"
         courses.style.color = "#C6CEDD"
         courses.style.fill = "#fff"
         courses.style.stroke = "#C6CEDD"
       }
+      
+    }, 500);
+  
+  }, [])
+
+  function ActivePage () {
+    const dashboard = document.getElementById("dashboard") as HTMLButtonElement | null
+    const courses = document.getElementById("courses") as HTMLButtonElement | null
+    const settings = document.getElementById("settings") as HTMLButtonElement | null
+  
     
-      console.log("SETT:" + settings_url)
-      console.log("DASH" + dash_url)
-      console.log("COU" + courses_url)
+    setTimeout(() => {
+      let current_url = window.location.href
+      let dash_url = current_url.search("dashboard")
+      let courses_url = current_url.search("courses")
+      let settings_url = current_url.search("settings")
+
+      if (dashboard && courses && settings != null && dash_url == 22 && courses_url == -1 && settings_url == -1) {
+        dashboard.style.backgroundColor = "#312e81"
+        dashboard.style.color = "#fff"
+        dashboard.style.fill = "#fff"
+        dashboard.style.stroke = "#312e81"
+
+        courses.style.backgroundColor = "white"
+        courses.style.color = "#C6CEDD"
+        courses.style.fill = "#fff"
+        courses.style.stroke = "#C6CEDD"
+
+        settings.style.backgroundColor = "white"
+        settings.style.color = "#C6CEDD"
+        settings.style.fill = "#fff"
+        settings.style.stroke = "#C6CEDD"
+      } else if (dashboard && courses && settings != null && dash_url == 22 && courses_url == 32 && settings_url == -1) {
+        dashboard.style.backgroundColor = "white"
+        dashboard.style.color = "#C6CEDD"
+        dashboard.style.fill = "#fff"
+        dashboard.style.stroke = "#C6CEDD"
+
+        courses.style.backgroundColor = "#312e81"
+        courses.style.color = "#fff"
+        courses.style.fill = "#fff"
+        courses.style.stroke = "#312e81"
+
+        settings.style.backgroundColor = "white"
+        settings.style.color = "#C6CEDD"
+        settings.style.fill = "#fff"
+        settings.style.stroke = "#C6CEDD"
+
+      } else if (dashboard && courses && settings != null && dash_url == 22 && courses_url == -1 && settings_url == 32) {
+        dashboard.style.backgroundColor = "white"
+        dashboard.style.color = "#C6CEDD"
+        dashboard.style.fill = "#fff"
+        dashboard.style.stroke = "#C6CEDD"
+
+        settings.style.backgroundColor = "#312e81"
+        settings.style.color = "#fff"
+        settings.style.fill = "#fff"
+        settings.style.stroke = "#312e81"
+
+        courses.style.backgroundColor = "white"
+        courses.style.color = "#C6CEDD"
+        courses.style.fill = "#fff"
+        courses.style.stroke = "#C6CEDD"
+      }
       
     }, 500);
   
@@ -92,13 +134,14 @@ const Sidebar = () => {
   return (
     <div className="flex flex-row w-max items-stretch justify-stretch border-r border-gray-300">
       <ul className="flex flex-col w-max items-stretch justify-stretch list-none m-0 p-0">
-        <Link to="/dashboard" className="no-underline w-min sm:w-full">
+        <Link to="/dashboard" id='dashboard' className="no-underline w-min sm:w-full text-gray-200">
           <button onClick={ActivePage} id='dashboard' className="bg-indigo-900 p-8 flex gap-2 text-left text-white fill-white stroke-indigo-900 hover:bg-indigo-500 hover:text-white hover:fill-white hover:stroke-indigo-500 w-min sm:w-full indent-128 sm:indent-0 ">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="inherit"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.69336 13.713C2.69336 8.082 3.30736 8.475 6.61236 5.41C8.05836 4.246 10.3084 2 12.2514 2C14.1934 2 16.4884 4.235 17.9474 5.41C21.2524 8.475 21.8654 8.082 21.8654 13.713C21.8654 22 19.9064 22 12.2794 22C4.65236 22 2.69336 22 2.69336 13.713Z" fill="inherit"/><path d="M9.37207 16.1357H15.1871" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             Dashboard
           </button>
         </Link>
         <Link
+          id='courses'
           to="/dashboard/courses"
           className="no-underline w-min sm:w-full text-gray-200"
         >
@@ -108,6 +151,7 @@ const Sidebar = () => {
           </button>
         </Link>
         <Link
+          id='settings'
           to="/dashboard/settings"
           className=" no-underline w-min sm:w-full text-gray-200"
         >
