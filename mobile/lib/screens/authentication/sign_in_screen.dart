@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/mdi.dart';
 import 'package:mobile/app_theme.dart';
-import 'package:mobile/screens/authentication/reset_screen.dart';
+import 'package:mobile/screens/authentication/forgot_password/enter_mail.dart';
+import 'package:mobile/screens/authentication/forgot_password/reset_screen.dart';
 import 'package:mobile/screens/authentication/sign_up_screen.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -24,7 +25,7 @@ class _SignInScreenState extends State<SignInScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:  Text("StudyPal",
+        title:  const Text("StudyPal",
         style: TextStyle(
           fontSize: 22,
           fontWeight:FontWeight.bold
@@ -112,7 +113,7 @@ class _SignInScreenState extends State<SignInScreen> {
                           GestureDetector(
                             onTap: () {
                               Navigator.of(context).pushNamed(
-                                ResetScreen.routePath
+                                EnterMail.routePath
                               );
                             },
                             child:  Text("Forgot Password",
@@ -125,7 +126,9 @@ class _SignInScreenState extends State<SignInScreen> {
                           height: 50,
                           width: double.maxFinite,
                           child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                               
+                              },
                               child:  Text(
                                 "Log in",
                                 style:  Theme.of(context).textTheme.displaySmall?.copyWith(color: AppTheme.buttonTextColor),
