@@ -14,6 +14,7 @@ class AppTheme {
   static const textFieldFilledColor = Color(0xFFF5F5F5);
   static const errorColor = Color(0xFFD41B35);
   static const buttonTextColor = Colors.white;
+  static const checkBoxColor = Colors.black;
 
   static final lightTheme = ThemeData(
     inputDecorationTheme: InputDecorationTheme(
