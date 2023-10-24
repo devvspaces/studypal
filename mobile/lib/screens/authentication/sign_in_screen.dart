@@ -147,7 +147,7 @@ class _SignInScreenState extends State<SignInScreen> {
                               );
                             },
                             child: Text(
-                               "Sign In",
+                               "Sign Up",
                                style: Theme.of(context).textTheme.displaySmall?.copyWith(color: AppTheme.primaryColor),
 
                             )
