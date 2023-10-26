@@ -1,11 +1,9 @@
-import React from 'react'
-
+import Dashboard from '@components/Dashboard'
+import CoursesPage from '@pages/CoursesPage'
+import DashboardPage from '@pages/DashboardPage'
+import HomePage from '@pages/HomePage'
+import SettingsPage from '@pages/SettingsPage'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import HomePage from './pages/HomePage'
-import Dashboard from './components/Dashboard'
-import CoursesPage from './pages/CoursesPage'
-import SettingsPage from './pages/SettingsPage'
-import DashboardPage from './pages/DashboardPage'
 
 const App = () => {
   return (
