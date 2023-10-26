@@ -1,12 +1,8 @@
-import React from 'react'
-import { render, screen } from '@testing-library/react'
-import { MemoryRouter } from 'react-router-dom'
-import Navbar from '../Navbar'
+import { screen } from '@testing-library/react'
+import { renderWithRouter } from '@utils/testUtils'
+import { describe, expect, it } from 'vitest'
 
-const renderWithRouter = (ui, { route = '/' } = {}) => {
-  window.history.pushState({}, 'Test page', route)
-  return render(ui, { wrapper: MemoryRouter })
-}
+import Navbar from '../Navbar'
 
 describe('<Navbar />', () => {
   const appTitle = 'TestApp'

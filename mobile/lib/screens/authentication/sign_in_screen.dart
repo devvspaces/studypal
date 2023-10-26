@@ -29,7 +29,7 @@ class _SignInScreenState extends State<SignInScreen> {
           fontSize: 22,
           fontWeight:FontWeight.bold
         ),
-        ),
+        ), 
         centerTitle: true,
       ),
       body: SizedBox(
