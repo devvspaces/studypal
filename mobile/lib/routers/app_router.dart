@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile/screens/authentication/onboarding_screen.dart';
+import 'package:mobile/screens/authentication/reset_screen.dart';
 import 'package:mobile/screens/authentication/sign_in_screen.dart';
 import 'package:mobile/screens/authentication/sign_up_screen.dart';
 import 'package:mobile/screens/authentication/splash_screen.dart';
@@ -16,6 +17,11 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => const OnboardingScreen(),
           settings: const RouteSettings(name: OnboardingScreen.routePath),
+        );
+         case ResetScreen.routePath:
+        return MaterialPageRoute(
+          builder: (context) => const ResetScreen(),
+          settings: const RouteSettings(name: ResetScreen.routePath),
         );
          case SignInScreen.routePath:
         return MaterialPageRoute(
