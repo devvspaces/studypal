@@ -7,7 +7,6 @@ import 'package:mobile/screens/authentication/sign_up_screen.dart';
 
 class SignInScreen extends StatefulWidget {
   static const String routePath = "sign_in_screen";
-
   const SignInScreen({super.key});
 
   @override
@@ -30,7 +29,7 @@ class _SignInScreenState extends State<SignInScreen> {
           fontSize: 22,
           fontWeight:FontWeight.bold
         ),
-        ), 
+        ),
         centerTitle: true,
       ),
       body: SizedBox(
@@ -148,7 +147,7 @@ class _SignInScreenState extends State<SignInScreen> {
                               );
                             },
                             child: Text(
-                               "Sign In",
+                               "Sign Up",
                                style: Theme.of(context).textTheme.displaySmall?.copyWith(color: AppTheme.primaryColor),
 
                             )
