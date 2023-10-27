@@ -7,6 +7,7 @@ import 'package:mobile/screens/authentication/sign_up_screen.dart';
 
 class SignInScreen extends StatefulWidget {
   static const String routePath = "sign_in_screen";
+
   const SignInScreen({super.key});
 
   @override
