@@ -1,5 +1,4 @@
-import React from 'react'
-import magnifierIcon from '../assets/magnifier.svg'
+import magnifierIcon from '@assets/magnifier.svg'
 
 const Search = () => {
   return (
